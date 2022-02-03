@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/03 16:25:42 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:00:39 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,51 @@
 int main(int ac, char **av)
 {
 	t_list *stack_a;
+	t_list *stack_b;
 	t_list *current;
+	t_list **alst;
+	 t_list **blst;
 	
 	if (ac >= 2)
 	{
+		
 		stack_a = arg_to_lst(ac, av);
+		alst = &stack_a;
 		current = stack_a;
+		printf("---stack_a-----\n");
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		
+
+		
+		printf("---stack_a-----\n");
+		swap_a(alst, stack_a);
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+
+
+		stack_b = NULL;
+		blst = &stack_b;
+		push_b(alst, stack_a, blst, stack_b);
+		printf("---stack_a-----\n");
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		printf("---stack_b-----\n");
+		current = *blst;
 		while(current != NULL)
 		{
 			ft_putnbr(current->content);

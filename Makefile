@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/02 18:35:07 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/03 17:59:14 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,15 @@ CFLAGS = -Wall -Wextra -Werror
 EXEC = push_swap
 SRCS = ./main.c \
 	./srcs/parsing.c \
+	./libft/ft_lstnew.c \
+	./libft/ft_lstadd_back.c \
+	./libft/ft_lstlast.c \
+	./libft/ft_atoi.c \
+	./libft/ft_putnbr.c \
+	./libft/ft_putchar.c \
+	./libft/ft_putstr.c \
+	./srcs/swap_function.c \
+	./srcs/push_function.c \
 
 INCLUDES = ./include/
 OBJS = ${SRCS:.c=.o}
