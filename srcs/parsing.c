@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:14 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/02 18:48:41 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/03 14:36:38 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 #include <stdio.h>
 
-t_list	**arg_to_lst(int ac , char **av)
+t_list **arg_to_lst(int ac , char **av)
 {
-	t_list	**alst;
 	int		i;
+	t_list **alst;
 	t_list	*new;
-	int		content;
-	
+	int	content;
+
 	i = 1;
 	alst = NULL;
 	while(i < ac)
 	{
-		printf("avant atoi\n");
 		content = ft_atoi(av[i]);
-		printf("avant nouvel element = %d\n", content);
-		new = ft_lstnew(&content);
-		printf("apres nouvel element\n");
+		new = ft_lstnew(content);
+		printf("content of new = %d\n", new->content);
+		printf("apres new node\n");
 		ft_lstadd_back(alst, new);
-		printf("apres addback\n");
+		printf("alst = %p\n", (alst));
 		i++;
 	}
+	printf("fin de la boucle\n");
+	printf("content first element = %d\n", (*alst)->content);
 	return(alst);
 }
