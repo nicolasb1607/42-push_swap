@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/03 18:00:39 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:23:22 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,59 @@ int main(int ac, char **av)
 		stack_b = NULL;
 		blst = &stack_b;
 		push_b(alst, stack_a, blst, stack_b);
+		printf("---stack_a-----\n");
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		printf("---stack_b-----\n");
+		current = *blst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		push_b(alst, stack_a, blst, stack_b);
+		printf("---stack_a-----\n");
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		printf("---stack_b-----\n");
+		current = *blst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+
+		swap_s(alst, stack_a, blst, stack_b);
+		printf("---stack_a-----\n");
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		printf("---stack_b-----\n");
+		current = *blst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+
+		push_a(alst, stack_a, blst, stack_b);
 		printf("---stack_a-----\n");
 		current = *alst;
 		while(current != NULL)
