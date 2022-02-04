@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:14 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/03 16:52:24 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/04 17:05:21 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-t_list *arg_to_lst(int ac , char **av)
+t_list *arg_to_lst(char **av)
 {
 	int		i;
 	t_list *alst;
@@ -22,7 +22,7 @@ t_list *arg_to_lst(int ac , char **av)
 
 	alst = ft_lstnew(ft_atoi(av[1]));
 	i = 2;
-	while(i < ac)
+	while(av[i])
 	{
 		new = ft_lstnew(ft_atoi(av[i]));
 		ft_lstadd_back(&alst, new);

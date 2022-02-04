@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:49:25 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/03 17:13:18 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/04 17:04:00 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@
 # include <stdlib.h>
 # include "../libft/libft.h"
 
-t_list *arg_to_lst(int ac , char **av);
+t_list *arg_to_lst(char **av);
 
 #endif
