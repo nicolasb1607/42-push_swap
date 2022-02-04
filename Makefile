@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/03 17:59:14 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/04 14:38:38 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,8 @@ SRCS = ./main.c \
 	./libft/ft_putstr.c \
 	./srcs/swap_function.c \
 	./srcs/push_function.c \
+	./srcs/rotate_function.c \
+	./srcs/rev_rotate_function.c \
 
 INCLUDES = ./include/
 OBJS = ${SRCS:.c=.o}
