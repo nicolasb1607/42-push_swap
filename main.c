@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 14:38:05 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/04 16:51:03 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int main(int ac, char **av)
 		
 		stack_a = arg_to_lst(ac, av);
 		alst = &stack_a;
+		if(check(alst) == 0)
+			return (0);
 		current = stack_a;
 		printf("---stack_a-----\n");
 		while(current != NULL)
