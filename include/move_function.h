@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   move_function.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 16:47:26 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 21:35:34 by nburat-d         ###   ########.fr       */
+/*   Created: 2022/02/04 20:38:30 by nburat-d          #+#    #+#             */
+/*   Updated: 2022/02/04 21:28:48 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
+#ifndef MOVE_FUNCTION_H
 
-# define PUSH_SWAP_H
-
-typedef struct	s_lstmove
-{
-	char	*content;
-	struct s_lstmove *next;
-}	t_lstmove;
+# define MOVE_FUNCTION_H
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "./parsing.h"
 # include "../libft/libft.h"
-# include "./swap_function.h"
-# include "./push_function.h"
-# include "./rotate_function.h"
-# include "./rev_rotate_function.h"
-# include "./check.h"
-# include "./move_function.h"
+# include "./push_swap.h"
 
-
+void	add_move(t_lstmove **movelst, char *move);
+void	read_mlst(t_lstmove **mlst);
 
 #endif

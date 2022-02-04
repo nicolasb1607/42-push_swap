@@ -1,6 +1,9 @@
 {
 	"files.associations": {
 		"*.c": "c",
-		"parsing.h": "c"
+		"parsing.h": "c",
+		"move_function.h": "c",
+		"swap_function.h": "c",
+		"push_function.h": "c"
 	}
 }

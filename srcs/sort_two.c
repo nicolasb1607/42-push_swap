@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_two.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 16:47:26 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 21:35:34 by nburat-d         ###   ########.fr       */
+/*   Created: 2022/02/04 17:22:03 by nburat-d          #+#    #+#             */
+/*   Updated: 2022/02/04 20:23:48 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
+#include "../include/sort_two.h"
 
-# define PUSH_SWAP_H
-
-typedef struct	s_lstmove
+void	sort_two(t_list **alst)
 {
-	char	*content;
-	struct s_lstmove *next;
-}	t_lstmove;
-
-# include <unistd.h>
-# include <stdlib.h>
-# include "./parsing.h"
-# include "../libft/libft.h"
-# include "./swap_function.h"
-# include "./push_function.h"
-# include "./rotate_function.h"
-# include "./rev_rotate_function.h"
-# include "./check.h"
-# include "./move_function.h"
-
-
-
-#endif
+	
+}

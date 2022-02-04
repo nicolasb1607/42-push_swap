@@ -6,13 +6,13 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:01 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 17:02:30 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/04 21:49:04 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_function.h"
 
-void	push_b(t_list **alst, t_list **blst)
+void	push_b(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
 	t_list *temp;
 	t_list *curr_a;
@@ -33,9 +33,10 @@ void	push_b(t_list **alst, t_list **blst)
 		*alst = curr_a;
 		*blst = curr_b;
 	}
+	add_move(mlst, "pb");
 }
 
-void	push_a(t_list **alst, t_list **blst)
+void	push_a(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
 	t_list *temp;
 	t_list *curr_a;
@@ -56,5 +57,5 @@ void	push_a(t_list **alst, t_list **blst)
 		*alst = curr_a;
 		*blst = curr_b;
 	}
-	
+	add_move(mlst, "pb");
 }

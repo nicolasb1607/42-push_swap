@@ -6,13 +6,13 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:04 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 16:57:23 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/04 21:37:13 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/swap_function.h"
 
-void	swap_a(t_list **alst)
+void	swap_a(t_list **alst, t_lstmove **mlst)
 {
 	t_list *temp;
 	t_list *curr;
@@ -25,10 +25,10 @@ void	swap_a(t_list **alst)
 		temp->next = curr;
 		*alst = temp;
 	}
-	// inscription sur la liste des commandes effectues
+	add_move(mlst, "sa");
 }
 
-void	swap_b(t_list **blst)
+void	swap_b(t_list **blst, t_lstmove **movelst)
 {
 	t_list *temp;
 	t_list *curr;
@@ -41,10 +41,11 @@ void	swap_b(t_list **blst)
 		temp->next = curr;
 		*blst = temp;
 	}
+	add_move(movelst, "sb");
 }
 
-void	swap_s(t_list **alst,t_list **blst)
+void	swap_s(t_list **alst,t_list **blst, t_lstmove **mlst)
 {
-	swap_a(alst);
-	swap_b(blst);
+	swap_a(alst, mlst);
+	swap_b(blst, mlst);
 }
