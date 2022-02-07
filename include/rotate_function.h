@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:17 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 14:30:06 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/07 11:35:02 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
-
-void rot_a(t_list **alst);
-void	rot_b(t_list **blst);
-void	rot_r(t_list **alst, t_list **blst);
+# include "./push_swap.h"
 
 
-
+void	rot_a(t_list **alst, t_lstmove **mlst);
+void	rot_b(t_list **blst, t_lstmove **mlst);
+void	rot_r(t_list **alst, t_list **blst, t_lstmove **mlst);
 
 #endif

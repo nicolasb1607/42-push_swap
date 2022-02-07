@@ -6,40 +6,53 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:31:16 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 14:44:10 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/07 14:01:37 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/rev_rotate_function.h"
 
-void	revrot_a(t_list **alst)
+void	revrot_a(t_list **alst, t_lstmove **mlst)
 {
-	t_list *first;
-	t_list *last;
+	t_list	*prev;
+	t_list	*curr;
 
-	last = ft_lstlast(*alst);
-	first = *alst;
-	*alst = first->next;
-	last->next = first;
-	first->next = NULL;
+	prev = NULL;
+	curr = *alst;
+	while (curr->next != NULL)
+	{ 
+		prev = curr;
+		curr = curr->next;
+	}
+	curr->next = *alst;
+	prev->next = NULL;
+	*alst = curr;
+	add_move(mlst, "rra");
 
 }
 
-void	revrot_b(t_list **blst)
+void	revrot_b(t_list **blst, t_lstmove **mlst)
 {
-	t_list *first;
-	t_list *last;
+	t_list	*prev;
+	t_list	*curr;
 
-	last = ft_lstlast(*blst);
-	first = *blst;
-	*blst = first->next;
-	last->next = first;
-	first->next = NULL;
+	prev = NULL;
+	curr = *blst;
+	while (curr->next != NULL)
+	{ 
+		prev = curr;
+		curr = curr->next;
+	}
+	curr->next = *blst;
+	prev->next = NULL;
+	*blst = curr;
+
+	add_move(mlst, "rrb");
 
 }
 
-void	revrot_r(t_list **alst, t_list **blst)
+void	revrot_r(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
-	revrot_a(alst);
-	revrot_b(blst);
+	revrot_a(alst, mlst);
+	revrot_b(blst, mlst);
 }

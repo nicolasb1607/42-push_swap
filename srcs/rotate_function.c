@@ -6,48 +6,44 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:48:16 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 14:37:35 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/07 14:01:17 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/rotate_function.h"
 
-void	rot_a(t_list **alst)
+void	rot_a(t_list **alst, t_lstmove **mlst)
 {
-	t_list	*prev;
-	t_list	*curr;
+	t_list *first;
+	t_list *last;
 
-	prev = NULL;
-	curr = *alst;
-	while (curr->next != NULL)
-	{ 
-		prev = curr;
-		curr = curr->next;
-	}
-	curr->next = *alst;
-	prev->next = NULL;
-	*alst = curr;
+	last = ft_lstlast(*alst);
+	first = *alst;
+	*alst = first->next;
+	last->next = first;
+	first->next = NULL;
+	add_move(mlst, "ra");
 }
 
-void	rot_b(t_list **blst)
+void	rot_b(t_list **blst, t_lstmove **mlst)
 {
-	t_list	*prev;
-	t_list	*curr;
+	
 
-	prev = NULL;
-	curr = *blst;
-	while (curr->next != NULL)
-	{ 
-		prev = curr;
-		curr = curr->next;
-	}
-	curr->next = *blst;
-	prev->next = NULL;
-	*blst = curr;
+	t_list *first;
+	t_list *last;
+
+	last = ft_lstlast(*blst);
+	first = *blst;
+	*blst = first->next;
+	last->next = first;
+	first->next = NULL;
+
+	add_move(mlst, "rb");
+
 }
 
-void	rot_r(t_list **alst, t_list **blst)
+void	rot_r(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
-	rot_a(alst);
-	rot_a(blst);
+	rot_a(alst, mlst);
+	rot_a(blst, mlst);
 }

@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/04 21:37:52 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/07 12:16:33 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS = ./main.c \
 	./srcs/rotate_function.c \
 	./srcs/rev_rotate_function.c \
 	./srcs/check.c \
-	./srcs/move_function.c
+	./srcs/move_function.c \
+	./srcs/sort_three.c
 
 INCLUDES = ./include/
 OBJS = ${SRCS:.c=.o}

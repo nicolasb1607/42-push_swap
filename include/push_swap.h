@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:26 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 21:35:34 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/07 12:14:56 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct	s_lstmove
 # include "./rev_rotate_function.h"
 # include "./check.h"
 # include "./move_function.h"
+# include "./sort_three.h"
 
 
 
