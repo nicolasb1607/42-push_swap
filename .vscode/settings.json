@@ -4,6 +4,8 @@
 		"parsing.h": "c",
 		"move_function.h": "c",
 		"swap_function.h": "c",
-		"push_function.h": "c"
+		"push_function.h": "c",
+		"push_swap.h": "c",
+		"dup_lst.h": "c"
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:01 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 21:49:04 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/07 18:20:39 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ void	push_a(t_list **alst, t_list **blst, t_lstmove **mlst)
 		*alst = curr_a;
 		*blst = curr_b;
 	}
-	add_move(mlst, "pb");
+	add_move(mlst, "pa");
 }
