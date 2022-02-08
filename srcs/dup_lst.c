@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:04:54 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/08 19:24:16 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/08 20:07:04 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,21 @@ void cnvrt_lst(t_list **alst, t_list **dup_lst)
 	t_list *curra;
 	t_list *currdup;
 
-	i = 0;
-	currdup = *dup_lst;
-	while (currdup)
+	curra = *alst;
+	while (curra)
 	{
-		curra = *alst;
-		while (curra)
+		i = 0;
+		currdup = *dup_lst;
+		while (currdup)
 		{
 			if (currdup->content == curra->content)
 			{
 				curra->content = i;
-				i++;
 				break;
 			}
-			curra = curra->next;
+			currdup = currdup->next;
+			i++;
 		}
-		currdup = currdup->next;
+		curra = curra->next;
 	}
 }
