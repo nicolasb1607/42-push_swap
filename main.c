@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/08 19:54:22 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:24:28 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 int main(int ac, char **av)
 {
 	t_list *stack_a;
-	// t_list *stack_b;
+	t_list *stack_b;
 	t_list **alst;
-	// t_list **blst;
+	t_list **blst;
 	t_lstmove *movelst;
 	t_lstmove **mlst;
 
@@ -33,8 +33,8 @@ int main(int ac, char **av)
 		alst = &stack_a;
 		movelst = NULL;
 		mlst = &movelst;
-		// stack_b = NULL;
-		// blst = &stack_b;
+		stack_b = NULL;
+		blst = &stack_b;
 		
 		stack_dup = ft_lstdup(alst);
 		dup_lst = &stack_dup; 
@@ -48,9 +48,10 @@ int main(int ac, char **av)
 		
 		bsort_lst(dup_lst);
 		cnvrt_lst(alst, dup_lst);
-
+		radix_sort(alst, blst, mlst);
+		
 		t_list *current;
-		printf("---stack_dup-----\n");
+		printf("---stack_a-----\n");
 		current = *alst;
 		while(current != NULL)
 		{
@@ -58,14 +59,14 @@ int main(int ac, char **av)
 			ft_putchar('\n');
 			current = current->next;
 		}
-		// printf("---stack_b-----\n");
-		// current = *blst;
-		// while(current != NULL)
-		// {
-		// 	ft_putnbr(current->content);
-		// 	ft_putchar('\n');
-		// 	current = current->next;
-		// }
+		printf("---stack_b-----\n");
+		current = *blst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
 		read_mlst(mlst);	
 	}
 	return (0);

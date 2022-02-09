@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/08 19:09:08 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/09 11:13:02 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS = ./main.c \
 	./srcs/sort_three.c \
 	./srcs/dup_lst.c \
 	./srcs/buble_sort.c \
+	./srcs/radix_sort.c \
 
 INCLUDES = ./include/
 OBJS = ${SRCS:.c=.o}

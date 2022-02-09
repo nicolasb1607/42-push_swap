@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:48:16 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/07 14:01:17 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:22:11 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	rot_a(t_list **alst, t_lstmove **mlst)
 
 	last = ft_lstlast(*alst);
 	first = *alst;
+	if (!first->next)
+		return;
 	*alst = first->next;
 	last->next = first;
 	first->next = NULL;
@@ -34,6 +36,8 @@ void	rot_b(t_list **blst, t_lstmove **mlst)
 
 	last = ft_lstlast(*blst);
 	first = *blst;
+	if (!first->next)
+		return;
 	*blst = first->next;
 	last->next = first;
 	first->next = NULL;
