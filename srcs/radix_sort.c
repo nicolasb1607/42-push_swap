@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:24:02 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/09 11:28:46 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/09 12:00:01 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,17 @@ void radix_sort(t_list **alst, t_list **blst, t_lstmove **mlst)
 	max_int = find_max(alst);
 	
 	max_bits = 0;
-	mask = 1;
-
 	while ((max_int >> max_bits) != 0)
 		max_bits++;
 	i = 0;
-	while (i <= max_bits)
+	while (i < max_bits)
 	{
 		size = ft_lstsize(*alst);
 		while (size)
 		{
 			curr = *alst;
 			mask = 1 << i;
-			if ((curr->content & mask) != 0)
+			if ((curr->content & mask) == 0)
 				push_b(alst, blst, mlst);
 			else
 				rot_a(alst, mlst);
