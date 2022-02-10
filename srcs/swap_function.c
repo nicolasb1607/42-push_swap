@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:04 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/04 21:37:13 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:35:12 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	swap_a(t_list **alst, t_lstmove **mlst)
 {
-	t_list *temp;
-	t_list *curr;
+	t_list	*temp;
+	t_list	*curr;
 
 	curr = *alst;
 	if (curr && curr->next != NULL)
@@ -30,8 +30,8 @@ void	swap_a(t_list **alst, t_lstmove **mlst)
 
 void	swap_b(t_list **blst, t_lstmove **movelst)
 {
-	t_list *temp;
-	t_list *curr;
+	t_list	*temp;
+	t_list	*curr;
 
 	curr = *blst;
 	if (curr && curr->next != NULL)
@@ -44,7 +44,7 @@ void	swap_b(t_list **blst, t_lstmove **movelst)
 	add_move(movelst, "sb");
 }
 
-void	swap_s(t_list **alst,t_list **blst, t_lstmove **mlst)
+void	swap_s(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
 	swap_a(alst, mlst);
 	swap_b(blst, mlst);

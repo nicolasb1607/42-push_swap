@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 11:27:09 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:20:10 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:34:16 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,3 @@ void	sort_three(t_list **alst, t_lstmove **mlst)
 		revrot_a(alst, mlst);
 	}
 }
-
-

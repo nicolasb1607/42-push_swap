@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:13:45 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/08 19:07:55 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:38:50 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@
 # include "../libft/libft.h"
 
 void	bsort_lst(t_list **alst);
-
 
 #endif

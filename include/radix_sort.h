@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:24:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/09 11:14:36 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:39:12 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include "../libft/libft.h"
 # include "./push_swap.h"
 
-void radix_sort(t_list **alst, t_list **blst, t_lstmove **mlst);
-
+void	radix_sort(t_list **alst, t_list **blst, t_lstmove **mlst);
 
 #endif

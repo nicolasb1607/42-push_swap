@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 11:26:07 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:15:33 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:37:50 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,5 @@
 void	sort_three(t_list **alst, t_lstmove **mlst);
 int		is_sorted(t_list **alst);
 int		pos_lowest(t_list **alst);
-
-
 
 #endif

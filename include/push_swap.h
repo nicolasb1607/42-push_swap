@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:26 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 22:57:40 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:44:49 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,10 @@
 
 # define PUSH_SWAP_H
 
-typedef struct s_init
-{
-	t_list *stack;
-	t_list **head;
-}	t_init;
-
-typedef struct	s_lstmove
-{
-	char	*content;
-	struct s_lstmove *next;
-}	t_lstmove;
-
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include "./parsing.h"
-# include "../libft/libft.h"
 # include "./swap_function.h"
 # include "./push_function.h"
 # include "./rotate_function.h"
@@ -42,5 +30,17 @@ typedef struct	s_lstmove
 # include "./dup_lst.h"
 # include "./buble_sort.h"
 # include "./radix_sort.h"
+
+typedef struct s_init
+{
+	t_list	*stack;
+	t_list	**head;
+}			t_init;
+
+typedef struct s_lstmove
+{
+	char				*content;
+	struct s_lstmove	*next;
+}						t_lstmove;
 
 #endif
