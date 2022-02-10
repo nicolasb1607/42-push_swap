@@ -6,13 +6,19 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:47:26 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:23:19 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 22:57:40 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 
 # define PUSH_SWAP_H
+
+typedef struct s_init
+{
+	t_list *stack;
+	t_list **head;
+}	t_init;
 
 typedef struct	s_lstmove
 {

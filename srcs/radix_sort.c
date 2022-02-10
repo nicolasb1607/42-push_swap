@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:24:02 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:50:37 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 21:15:57 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,6 @@ static int find_max(t_list **alst)
 		curr = curr->next;
 	}
 	return (max);
-}
-
-void	find_less_move(t_list **alst, int mask, t_lstmove **mlst)
-{
-	int pos; 
-	int size; 
-	t_list *curr;
-
-	pos = 0;
-	curr = *alst;
-	size = ft_lstsize(*alst);
-	while ((curr->content & mask) != 0 && (size - 1))
-	{
-		curr = curr->next;
-		pos++;
-		size--;
-	}
-	size = ft_lstsize(*alst);
-	if (pos <= size / 2)
-		rot_a(alst, mlst);
-	else
-		revrot_a(alst, mlst);
 }
 
 void radix_sort(t_list **alst, t_list **blst, t_lstmove **mlst)
@@ -76,7 +54,6 @@ void radix_sort(t_list **alst, t_list **blst, t_lstmove **mlst)
 				push_b(alst, blst, mlst);
 			else
 				rot_a(alst, mlst);
-				//find_less_move(alst, mask, mlst);
 			size--;
 		}
 		while (*blst)
