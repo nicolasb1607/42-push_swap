@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:37:34 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 11:09:29 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 23:48:29 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,18 @@ typedef struct s_list
 	int				content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_init
+{
+	t_list	*stack;
+	t_list	**head;
+}			t_init;
+
+typedef struct s_lstmove
+{
+	char				*content;
+	struct s_lstmove	*next;
+}						t_lstmove;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
