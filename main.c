@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 12:45:31 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 16:17:44 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,23 @@ int main(int ac, char **av)
 		stack_dup = ft_lstdup(alst);
 		dup_lst = &stack_dup; 
 		
-		// if(check(alst) == 0)
-		// 	return (0);
-		// if(ac == 3)
-		// 	swap_a(alst, mlst);
-		// else if (ac == 4)
-		// 	sort_three(alst, mlst);
+		if(check(alst) == 0)
+			return (0);
+		if(ac == 3)
+				swap_a(alst, mlst);	
+		else if (ac == 4)
+			sort_three(alst, mlst);
 		
-		bsort_lst(dup_lst);
-		cnvrt_lst(alst, dup_lst);
-		radix_sort(alst, blst, mlst);
+		else if (ac == 5)
+			sort_four(alst, blst, mlst);
+		else if (ac == 6)
+			sort_five(alst, blst, mlst);
+		else 
+		{
+			bsort_lst(dup_lst);
+			cnvrt_lst(alst, dup_lst);
+			radix_sort(alst, blst, mlst);
+		}
 		
 		// t_list *current;
 		// printf("---stack_a-----\n");
