@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 20:32:07 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 11:13:28 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 11:18:25 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void	filter(t_lstmove **mlst)
 	prev = NULL;
 	while (next)
 	{
-		if ((ft_strcmp(curr->content, "pb") == 0) && (ft_strcmp(next->content, "pa") == 0))
+		if ((ft_strcmp(curr->content, "pb") == 0) &&
+				(ft_strcmp(next->content, "pa") == 0))
 		{
 			delmove(prev, curr, next);
 			prev = NULL;

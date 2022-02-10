@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/09 11:13:02 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/10 11:31:45 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(EXEC) : $(OBJS)
 	$(CC) $(CFLAGS) -L ./libft/ $^ -o $@ -lft -g
 
 MAKELIBFT :
-	make  bonus -C ./libft/
+	make -C ./libft/
 
 .o : .c
 		$(CC) $(CFLAGS) -L ./libft/ -c $< -o $@ -I $(INCLUDES) -lft -g
