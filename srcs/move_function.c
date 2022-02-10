@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 20:32:07 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 11:18:25 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 18:30:09 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ void	read_mlst(t_lstmove **mlst)
 {
 	t_lstmove *curr;
 	
+	if (*mlst == NULL)
+		return ;
 	filter(mlst);
 	curr = *mlst;
 	while (curr)

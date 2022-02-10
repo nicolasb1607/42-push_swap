@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 11:27:09 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 16:34:52 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 19:08:39 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,41 +35,79 @@ void sort_three(t_list **alst, t_lstmove **mlst)
     frst = *alst;
     scnd = frst->next;
     thrd = scnd->next;
-    if (frst->content > scnd->content && frst->content < thrd->content)
-        swap_a(alst, mlst);
+    is_sorted(alst);
     if (frst->content > scnd->content && frst->content > thrd->content)
     {
-        if (scnd->content < thrd->content)
-            rot_a(alst, mlst);
-        else
-        {
-            swap_a(alst, mlst);
-            revrot_a(alst, mlst);
-        }
+        swap_a(alst, mlst);
+        revrot_a(alst, mlst);
     }
+    if (frst->content < scnd->content && frst->content > thrd->content)
+        revrot_a(alst, mlst);
+    if (frst->content < scnd->content && frst->content < thrd->content)
+    {
+        revrot_a(alst, mlst);
+        swap_a(alst, mlst);
+    }
+}
+
+int pos_lowest(t_list **alst)
+{
+    t_list *curr;
+    int min;
+    int i;
+    int pos;
+
+    curr = *alst;
+    min = curr->content;
+    i = 0;
+    pos = 0;
+    while (curr)
+    {
+        if (min > curr->content)
+        {
+            min = curr->content;
+            pos = i;
+        }
+        curr = curr->next;
+        i++;
+    }
+    return (pos);
+}
+
+void push_lowest_to_b(t_list **alst, t_list **blst, t_lstmove **mlst)
+{
+    int pos;
+    int size;
+
+    pos = pos_lowest(alst);
+    size = ft_lstsize(*alst);
+    if (pos <= size / 2)
+        while (pos)
+        {
+            rot_a(alst, mlst);
+            pos--;
+        }
+    else
+        while (size - pos)
+        {
+            revrot_a(alst, mlst);
+            pos++;
+        }
+    push_b(alst, blst, mlst);
 }
 
 void sort_four(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
-    t_list *topa;
-    t_list *topb;
-    t_list *lasta;
-
-    push_b(alst, blst, mlst);
+    push_lowest_to_b(alst, blst, mlst);
     sort_three(alst, mlst);
-    topb = *blst;
-    topa = *alst;
-    lasta = ft_lstlast(*alst);
-    while (topb->content > topa->content || topb->content < lasta->content)
-    {
-        rot_a(alst, mlst);
-        topa = *alst;
-        lasta = ft_lstlast(*alst);
-    }
     push_a(alst, blst, mlst);
-    while (is_sorted(alst) == 1)
-        rot_a(alst, mlst);
 }
 
-void sort_five(t_list **alst, t_list **blst, t_lstmove **mlst)
+void    sort_five(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
+    push_lowest_to_b(alst, blst, mlst);
+    push_lowest_to_b(alst, blst, mlst);
+    sort_three(alst, mlst);
+    push_a(alst, blst, mlst);
+    push_a(alst, blst, mlst);
+}
