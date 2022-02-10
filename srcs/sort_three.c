@@ -6,49 +6,11 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 11:27:09 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 19:08:39 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 19:59:40 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/sort_three.h"
-
-int is_sorted(t_list **alst)
-{
-    t_list *curr;
-
-    curr = *alst;
-    while (curr->next)
-    {
-        if (curr->content > curr->next->content)
-            return (1);
-        curr = curr->next;
-    }
-    return (0);
-}
-
-void sort_three(t_list **alst, t_lstmove **mlst)
-{
-    t_list *frst;
-    t_list *scnd;
-    t_list *thrd;
-
-    frst = *alst;
-    scnd = frst->next;
-    thrd = scnd->next;
-    is_sorted(alst);
-    if (frst->content > scnd->content && frst->content > thrd->content)
-    {
-        swap_a(alst, mlst);
-        revrot_a(alst, mlst);
-    }
-    if (frst->content < scnd->content && frst->content > thrd->content)
-        revrot_a(alst, mlst);
-    if (frst->content < scnd->content && frst->content < thrd->content)
-    {
-        revrot_a(alst, mlst);
-        swap_a(alst, mlst);
-    }
-}
 
 int pos_lowest(t_list **alst)
 {
@@ -74,6 +36,51 @@ int pos_lowest(t_list **alst)
     return (pos);
 }
 
+int is_sorted(t_list **alst)
+{
+    t_list *curr;
+
+    curr = *alst;
+    while (curr->next)
+    {
+        if (curr->content > curr->next->content)
+            return (1);
+        curr = curr->next;
+    }
+    return (0);
+}
+
+void sort_three(t_list **alst, t_lstmove **mlst)
+{
+    t_list *frst;
+    t_list *scnd;
+    t_list *thrd;
+
+    frst = *alst;
+    scnd = frst->next;
+    thrd = scnd->next;
+    if (is_sorted(alst) == 0)
+        return ;
+    else if (pos_lowest(alst) == 0 && scnd->content > thrd->content)
+        {
+            swap_a(alst, mlst);
+            rot_a(alst, mlst);
+        }
+    if (pos_lowest(alst) == 1 && frst->content > thrd->content)
+        rot_a(alst, mlst);
+    if (pos_lowest(alst) == 1 && frst->content < thrd->content)
+        swap_a(alst, mlst);
+    if (pos_lowest(alst) == 2 && frst->content < scnd->content)
+        revrot_a(alst, mlst);
+    if (pos_lowest(alst) == 2 && frst->content > scnd->content)
+    {
+        swap_a(alst,mlst);
+        revrot_a(alst, mlst);
+    }
+}
+
+
+
 void push_lowest_to_b(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
     int pos;
@@ -81,7 +88,7 @@ void push_lowest_to_b(t_list **alst, t_list **blst, t_lstmove **mlst)
 
     pos = pos_lowest(alst);
     size = ft_lstsize(*alst);
-    if (pos <= size / 2)
+    if (pos < size / 2)
         while (pos)
         {
             rot_a(alst, mlst);
