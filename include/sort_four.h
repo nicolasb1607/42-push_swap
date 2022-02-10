@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.h                                       :+:      :+:    :+:   */
+/*   sort_four.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 11:26:07 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:15:33 by nburat-d         ###   ########.fr       */
+/*   Created: 2022/02/10 20:17:31 by nburat-d          #+#    #+#             */
+/*   Updated: 2022/02/10 20:18:17 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORT_THREE_H
+#ifndef SORT_FOUR_H
 
-# define SORT_THREE_H
+# define SORT_FOUR_H
 
 # include <unistd.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
 # include "./push_swap.h"
 
-void	sort_three(t_list **alst, t_lstmove **mlst);
-int		is_sorted(t_list **alst);
-int		pos_lowest(t_list **alst);
+void	push_lowest_to_b(t_list **alst, t_list **blst, t_lstmove **mlst);
+void	sort_four(t_list **alst, t_list **blst, t_lstmove **mlst);
+
 
 
 

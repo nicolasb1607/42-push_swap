@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 16:47:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/10 11:31:45 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/10 20:21:46 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ SRCS = ./main.c \
 	./srcs/check.c \
 	./srcs/move_function.c \
 	./srcs/sort_three.c \
+	./srcs/sort_four.c \
+	./srcs/sort_five.c \
 	./srcs/dup_lst.c \
 	./srcs/buble_sort.c \
 	./srcs/radix_sort.c \

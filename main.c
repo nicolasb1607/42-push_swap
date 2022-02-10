@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 20:01:21 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:47:11 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,23 +56,23 @@ int main(int ac, char **av)
 			radix_sort(alst, blst, mlst);
 		}
 		
-		// t_list *current;
-		// printf("---stack_a-----\n");
-		// current = *alst;
-		// while(current != NULL)
-		// {
-		// 	ft_putnbr(current->content);
-		// 	ft_putchar('\n');
-		// 	current = current->next;
-		// }
-		// // printf("---stack_b-----\n");
-		// current = *blst;
-		// while(current != NULL)
-		// {
-		// 	ft_putnbr(current->content);
-		// 	ft_putchar('\n');
-		// 	current = current->next;
-		// }
+		t_list *current;
+		printf("---stack_a-----\n");
+		current = *alst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
+		// printf("---stack_b-----\n");
+		current = *blst;
+		while(current != NULL)
+		{
+			ft_putnbr(current->content);
+			ft_putchar('\n');
+			current = current->next;
+		}
 		read_mlst(mlst);	
 	}
 	return (0);
