@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:04:54 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/08 20:07:04 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/08 20:42:01 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ t_list *ft_lstdup(t_list **alst)
 	return (dup);
 }
 
+
+/* 
+allow to convert the number in the A stack in number from range [0 - N]
+*/
 void cnvrt_lst(t_list **alst, t_list **dup_lst)
 {
 	int i;
