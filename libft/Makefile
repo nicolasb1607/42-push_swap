@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 23:36:29 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/10 23:36:30 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/02/12 19:22:58 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS = ./ft_atoi.c \
 	./ft_lstsize.c \
 	./ft_lstlast.c \
 	./ft_lstadd_back.c \
+	./ft_is_int.c \
 	# ./ft_lstdelone.c \
 	# ./ft_lstclear.c \
 	# ./ft_lstiter.c \

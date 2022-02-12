@@ -6,16 +6,35 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:42:44 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/10 23:12:24 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/12 19:42:46 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/check.h"
 
-static int	contains_dup(t_list **alst)
+int check_arg(char **av)
 {
-	t_list	*curr;
-	t_list	*next;
+	int i;
+	
+	i = 0;
+	while (av[++i])
+	{
+		if (av[i][0])
+		{
+			if (ft_is_int(av[i]) == 0)
+			{
+				ft_putstr("Error\n");
+				exit (0);
+			}
+		}
+	}
+	return (0);
+}
+
+static int contains_dup(t_list **alst)
+{
+	t_list *curr;
+	t_list *next;
 
 	curr = *alst;
 	while (curr != NULL)
@@ -24,7 +43,10 @@ static int	contains_dup(t_list **alst)
 		while (next)
 		{
 			if (curr->content == next->content)
+			{
+				ft_putstr("Error\n");
 				return (1);
+			}
 			next = next->next;
 		}
 		curr = curr->next;
@@ -36,10 +58,10 @@ static int	contains_dup(t_list **alst)
 
 Returns 0 if the list is sorted, returns 1 if not.
 */
-int	check(t_list **alst)
+int check(t_list **alst)
 {
-	t_list	*curr;
-	t_list	*prev;
+	t_list *curr;
+	t_list *prev;
 
 	prev = NULL;
 	curr = *alst;

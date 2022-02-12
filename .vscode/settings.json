@@ -6,6 +6,7 @@
 		"swap_function.h": "c",
 		"push_function.h": "c",
 		"push_swap.h": "c",
-		"dup_lst.h": "c"
+		"dup_lst.h": "c",
+		"check.h": "c"
 	}
 }

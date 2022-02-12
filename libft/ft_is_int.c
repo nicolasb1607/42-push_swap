@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_is_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 17:37:46 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/11 18:17:49 by nburat-d         ###   ########.fr       */
+/*   Created: 2022/02/12 18:58:42 by nburat-d          #+#    #+#             */
+/*   Updated: 2022/02/12 19:22:23 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_is_int(char *str)
 {
-	int	num;
 	int	i;
-	int	neg;
 
-	num = 0;
 	i = 0;
-	neg = 1;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
+	while (str[i])
 	{
-		if (nptr[i] == '-')
-			neg = -1;
+		if (ft_isdigit(str[i]) == 0)
+			return (0);
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + nptr[i] - 48;
-		i++;
-	}
-	return (num * neg);
+	if (ft_strlen(str) < 10)
+		return (1);
+	if (ft_strlen (str) > 11)
+		return (0);
+	if (ft_strlen (str) == 10)
+		if (ft_strcmp("2147483647", str) < 0)
+			return (0);
+	if (ft_strlen(str) == 11)
+		if (ft_strcmp("-2147483648", str) < 0)
+			return (0);
+	return (1);
 }
