@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/11 16:42:30 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/12 20:03:25 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	which_algo(t_list **alst, t_list **blst, t_lstmove **mlst)
 		bsort_lst(dup_lst);
 		cnvrt_lst(alst, dup_lst);
 		radix_sort(alst, blst, mlst);
+		ft_lstdelall(dup_lst);
 	}
 }
 
@@ -57,6 +58,8 @@ int	main(int ac, char **av)
 		listb.head = &(listb.stack);
 		which_algo(lista.head, listb.head, mlst);
 		read_mlst(mlst);
+		ft_lstdelall(lista.head);
+		ft_movelstdelall(mlst);
 	}
 	return (0);
 }
