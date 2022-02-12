@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 17:22:08 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/11 16:52:06 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/12 20:06:16 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@
 
 int	check(t_list **alst);
 int	check_arg(char **av);
-
 
 #endif

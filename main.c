@@ -6,7 +6,7 @@
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:39:20 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/12 20:03:25 by nburat-d         ###   ########.fr       */
+/*   Updated: 2022/02/12 20:09:17 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	which_algo(t_list **alst, t_list **blst, t_lstmove **mlst)
 {
 	t_list	**dup_lst;
 	t_list	*stack_dup;
-	
+
 	if (check(alst) == 0)
 		return ;
 	if (ft_lstsize(*alst) == 2)
